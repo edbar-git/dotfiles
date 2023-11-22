@@ -22,7 +22,7 @@
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: Noto Sans Regular 14
+font pango: IosevkaTerm NF Regular 12
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -293,7 +293,7 @@ bindsym $mod+n exec /usr/bin/thunar
 bindsym $mod+a exec /usr/bin/firefox
 bindsym $mod+w exec /usr/bin/librewolf
 bindsym $mod+r exec /usr/bin/keepassxc
-bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
+bindsym Print exec scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/$(date +"%Y-%m-%d-%T")-screenshot.png"
 # Change keyboard layout
 bindsym $mod+space exec zsh ~/.local/kbchange.sh
 # Power Profiles menu switcher (rofi)
