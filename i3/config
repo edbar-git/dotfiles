@@ -175,21 +175,27 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Redirect sound to headphones
-# bindsym $mod+p exec /usr/local/bin/switch-audio-port
-
 ## App shortcuts
+# File manager
 bindsym $mod+n exec /usr/bin/thunar
-bindsym $mod+a exec /usr/bin/firefox
+# main browser
 bindsym $mod+w exec /usr/bin/librewolf
+# alt browser
+# mainly used as a normie browser when librewolf privacy settings break a site
+bindsym $mod+a exec /usr/bin/firefox
+# password manager (if you don't have one you're wrong) 
 bindsym $mod+r exec /usr/bin/keepassxc
+
 bindsym Print exec scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/$(date +"%Y-%m-%d-%T")-screenshot.png"
+
 # Change keyboard layout
-bindsym $mod+space exec zsh ~/.local/kbchange.sh
+bindsym $mod+space exec zsh ~/.config/i3/scripts/kbchange.sh
+
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
+
 # Change background
-bindsym $mod+b exec zsh ~/.local/change_wallpaper.sh
+bindsym $mod+b exec zsh ~/.config/i3/scripts/chwp.sh
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -207,19 +213,6 @@ set $ws7 "7:7"
 set $ws8 "8:8"
 set $ws9 "9:9"
 set $ws10 "10:10"
-
-# use workspaces on different displays:
-# where you have to replace VGA-0/HDMI-0 with the names for your displays
-# you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-#workspace $ws5 output HDMI-0
-
-# bind program to workspace and focus to them on startup:
-
-# automatic set focus new window if it opens on another workspace than the current:
 
 ##############
 # compositor #
