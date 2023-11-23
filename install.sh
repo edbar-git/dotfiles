@@ -28,3 +28,10 @@ ln -sf "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 
 # Adds custom aliases
 ln -sf "$HOME/dotfiles/zsh/aliases" "$HOME/.config/zsh/aliases"
+
+########
+# nvim #
+########
+
+# Adds nvim config
+ln -sf "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
