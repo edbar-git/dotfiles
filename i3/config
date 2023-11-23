@@ -370,6 +370,7 @@ bar {
 		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
 		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
 	}
+}
 
 #####################################
 # Application menu handled by rofi: #
