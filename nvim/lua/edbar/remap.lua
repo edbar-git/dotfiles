@@ -1,13 +1,17 @@
 -- Set space as the leader key 
 vim.g.mapleader = " "
+
 -- Open file explorer within NeoVim
 vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
+
+-- Open file explorer within NeoVim
+vim.keymap.set("n", "<leader>tt", function () require("trouble").toggle()  end)
 
 -- Allows lines reposition in visual mode
 vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
--- Keep cursor in place when joining lines with J 
+-- Keep cursor in place when joining lines with J  
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- Keep cursor in the middle of the screen when finding search terms
