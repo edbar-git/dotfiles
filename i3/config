@@ -85,7 +85,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod++x mode "resize"
+bindsym $mod+x mode "resize"
 
 ######################################
 # keybindings for different actions: #
