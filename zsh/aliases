@@ -1,0 +1,21 @@
+# Useful aliases
+alias rm='rm -Iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias la='ls -lah'
+
+# Colors in output
+alias ls='ls -hN --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip -color=auto'
+
+# Replace some default programs with custom version
+alias gpp='g++'
+alias htop='conky'
+alias vim='nvim'
+
+# Git aliases
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
