@@ -51,9 +51,9 @@ return require('packer').startup(function(use)
         'folke/trouble.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-    
+
+    use 'toppair/peek.nvim'
     use 'nvim-tree/nvim-web-devicons'
 
     use 'folke/tokyonight.nvim'
 end)
- 
