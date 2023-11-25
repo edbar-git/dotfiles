@@ -179,10 +179,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # File manager
 bindsym $mod+n exec /usr/bin/thunar
 # main browser
-bindsym $mod+w exec /usr/bin/librewolf
-# alt browser
-# mainly used as a normie browser when librewolf privacy settings break a site
-bindsym $mod+a exec /usr/bin/firefox
+bindsym $mod+w exec /usr/bin/firefox
 # password manager (if you don't have one you're wrong) 
 bindsym $mod+r exec /usr/bin/keepassxc
 
