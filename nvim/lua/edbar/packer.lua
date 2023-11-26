@@ -52,7 +52,11 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
-    use 'toppair/peek.nvim'
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function () vim.fn["mkdp#util#install"]() end,
+    })
+
     use 'nvim-tree/nvim-web-devicons'
 
     use 'folke/tokyonight.nvim'
