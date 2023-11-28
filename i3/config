@@ -93,7 +93,7 @@ bindsym $mod+x mode "resize"
 
 # start a terminal
 # had a hard time setting up urxvt. this might change in the future.
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec tilix
 
 # kill focused window
 bindsym $mod+q kill
