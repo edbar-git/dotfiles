@@ -47,11 +47,6 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
-    use {
-        'folke/trouble.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
-
     use({
         "iamcco/markdown-preview.nvim",
         run = function () vim.fn["mkdp#util#install"]() end,
@@ -59,5 +54,5 @@ return require('packer').startup(function(use)
 
     use 'nvim-tree/nvim-web-devicons'
 
-    use 'folke/tokyonight.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 end)
