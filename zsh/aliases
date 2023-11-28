@@ -15,7 +15,3 @@ alias gpp='g++'
 alias htop='conky'
 alias vim='nvim'
 
-# Git aliases
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'

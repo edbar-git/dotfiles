@@ -1,0 +1,19 @@
+[user]
+	email = git@edbar.xyz
+	name = Eduardo Barroso
+[core]
+	editor = nvim
+[diff]
+    tool = nvim -f
+[merge]
+    tool = nvim -d
+[init]
+    defaultBranch = main
+[pull]
+    rebase = false
+[alias]
+    co = checkout
+    st = status -sb
+    lg = log --all --graph --decorate --oneline --abbrev-commit
+    cm = commit
+    tags = tag -l

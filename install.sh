@@ -35,3 +35,11 @@ ln -sf "$HOME/dotfiles/zsh/aliases" "$HOME/.config/zsh/aliases"
 
 # Adds nvim config
 ln -sf "$HOME/dotfiles/nvim" "$HOME/.config/nvim"
+
+
+#######
+# git #
+#######
+
+# Links gitconfig to home directory
+ln -sf "$HOME/dotfiles/gitconfig" "$HOME/.gitconfig"
