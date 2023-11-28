@@ -1,3 +1,6 @@
+-- Sets leader key to space
+vim.g.mapleader = " "
+
 -- Enables fat cursor on neovim
 vim.opt.guicursor = ""
 
@@ -10,8 +13,6 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-
--- Enables smart indentation
 vim.opt.smartindent = true
 
 -- Allows vim to keep an undo history for a long time
@@ -28,16 +29,10 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 -- Improves scrolling experience
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 15
 
 -- Fast update time
 vim.opt.updatetime = 50
-
--- Enables side column color
-vim.opt.colorcolumn = "75"
-
--- Sets leader key to space
-vim.g.mapleader = " "
 
 -- Improves split window experience
 vim.cmd "set splitbelow splitright"

@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>tt", function () require("trouble").toggle()  end)
 vim.keymap.set("n", "<leader>md", vim.cmd.MarkdownPreview)
 
 -- Allows lines reposition in visual mode
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 -- Keep cursor in place when joining lines with J  
