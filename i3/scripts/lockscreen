@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Directory for lockscreens
+# ONLY HAVE IMAGES IN THIS DIRECTORY
+DIR_PATH=$HOME/Pictures/lockscreens//
+PICTURE=$DIR_PATH"$(ls -1 $DIR_PATH | shuf -n 1)"
+
+# Courtesy of neruthes
+# https://github.com/i3/i3lock/issues/81#issuecomment-999721698
+SCREEN_RESOLUTION="$(xdpyinfo | grep dimensions | cut -d' ' -f7)"
+BGCOLOR="00000"
+convert $PICTURE -extent "$SCREEN_RESOLUTION" RGB:- | i3lock --raw "$SCREEN_RESOLUTION":rgb -c "000000" -i /dev/stdin
