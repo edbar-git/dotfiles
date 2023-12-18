@@ -4,11 +4,7 @@ vim.g.mapleader = " "
 -- Open file explorer within NeoVim
 vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
 
--- Open diagnostics messages within NeoVim
-vim.keymap.set("n", "<leader>tt", function () require("trouble").toggle()  end)
-
-
--- Open diagnostics messages within NeoVim
+-- Open markdown preview in browser window
 vim.keymap.set("n", "<leader>md", vim.cmd.MarkdownPreview)
 
 -- Allows lines reposition in visual mode
