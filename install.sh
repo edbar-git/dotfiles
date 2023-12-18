@@ -1,19 +1,22 @@
-# Install configs on a new system
+# Install packages
+yay -S --needed --noconfirm keepassxc neovim ttf-iosevkaterm-nerd zsh zsh-theme-powerlevel10k-git picom nitrogen gxkb setxkbmap conky autotiling
+
+# Setup preferences
 
 ######
 # i3 #
 ######
 
-# Replaces i3 configs with the ones in this repository
-rm -rf "$HOME/.config/i3/"
+# Replaces i3 configs 
+# rm -rf "$HOME/.config/i3/"
 ln -s "$HOME/dotfiles/i3/" "$HOME/.config"
 
 #########
 # picom #
 #########
 
-# Replaces picom configs with the ones in this repository
-rm -rf "$HOME/.config/picom/"
+# Adds picom config
+# rm -rf "$HOME/.config/picom/"
 ln -s "$HOME/dotfiles/picom/" "$HOME/.config"
 
 #######
@@ -21,17 +24,25 @@ ln -s "$HOME/dotfiles/picom/" "$HOME/.config"
 #######
 
 # Creates directory for zsh in .config
-mdkir -p "$HOME/.config/zsh"
+mkdir -p "$HOME/.config/zsh"
 
-# Links zshrc in this repository to .config/zshrc
+# Links zshrc
 ln -sf "$HOME/dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 
 # Adds custom aliases
 ln -sf "$HOME/dotfiles/zsh/aliases" "$HOME/.config/zsh/aliases"
 
-########
-# nvim #
-########
+##########
+# neovim #
+##########
+
+# Installs packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+#Syncs packer
+# NEEDS TESTING
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 # Adds nvim config
 ln -sf "$HOME/dotfiles/nvim" "$HOME/.config/nvim"

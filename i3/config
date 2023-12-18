@@ -71,29 +71,24 @@ bindsym $mod+Shift+0    move container to workspace  $ws10
 # resize window (you can also use the mouse for that):
 mode "resize" {
 # These bindings trigger as soon as you enter the resize mode
-# Pressing left will shrink the window's width.
-# Pressing right will grow the window's width.
-# Pressing up will shrink the window's height.
-# Pressing down will grow the window's height.
         bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize shrink height 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
 	bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Escape mode "default"
 }
 
-bindsym $mod+x mode "resize"
+bindsym $mod+r mode "resize"
 
 ######################################
 # keybindings for different actions: #
 ######################################
 
 # start a terminal
-# had a hard time setting up urxvt. this might change in the future.
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -103,11 +98,7 @@ bindsym $mod+Shift+q exec ~/.config/i3/scripts/powermenu
 
 # Lock the system
 # lock with a picture:
-# only accepts png by default. check the manual to see additional support.
-bindsym $mod+z exec i3lock -i  ~/Pictures/wallpapers/opie.png -p default 
-# OR
-# lock by blurring the screen:
-# bindsym $mod+z exec ~/.config/i3/scripts/blur-lock
+bindsym $mod+z exec ~/.config/i3/scripts/lockscreen
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -147,9 +138,6 @@ bindsym $mod+s layout stacking
 bindsym $mod+Shift+s layout tabbed
 bindsym $mod+e layout toggle split
 
-# open new empty workspace
-bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
-
 # Multimedia Keys
 
 # volume
@@ -182,7 +170,7 @@ bindsym $mod+n exec /usr/bin/thunar
 # main browser
 bindsym $mod+w exec /usr/bin/firefox
 # password manager (if you don't have one you're wrong) 
-bindsym $mod+r exec /usr/bin/keepassxc
+bindsym $mod+a exec /usr/bin/keepassxc
 
 bindsym Print exec scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/Pictures/$(date +"%Y-%m-%d-%T")-screenshot.png"
 
@@ -193,7 +181,7 @@ bindsym $mod+space exec zsh ~/.config/i3/scripts/kbchange.sh
 bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 
 # Change background
-bindsym $mod+b exec zsh ~/.config/i3/scripts/chwp.sh
+bindsym $mod+b exec ~/.config/i3/scripts/wallpaper
 
 ##########################################
 # configuration for workspace behaviour: #
@@ -238,27 +226,21 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # in this cases better disable dex and use manual starting apps using xdg/autostart
 #exec --no-startup-id dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 exec --no-startup-id dex --autostart --environment i3
-
-# configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
 exec --no-startup-id gxkb
-exec --no-startup-id zsh ~/.config/i3/scripts/kbchange.sh
 
 # start conky:
-# intend to setup custom conky later on
-#exec_always --no-startup-id conky
+# exec_always --no-startup-id conky
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
-exec --no-startup-id sleep 2 & nitrogen --restore
+# revert to & nitrogen --restore if it breaks
+exec --no-startup-id sleep 2 & wallpaper
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
-
-# disable power saving (for example if using xscreensaver)
-#exec --no-startup-id xset -dpms
 
 # use xautolock to use autosuspend rules for mobile devices
 # https://wiki.archlinux.org/title/Session_lock#xautolock
@@ -273,11 +255,9 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 exec --no-startup-id /usr/bin/dunst
 
 # autotiling script
-# yay -S autotiling ;) (it is in AUR)
 exec_always --no-startup-id autotiling
 
 # Autostart apps as you like
-# autostarts vpn (if you don't have one you're wrong)
 exec --no-startup-id sleep 2 && mullvad-vpn
 
 ###############
@@ -290,10 +270,10 @@ exec --no-startup-id sleep 2 && mullvad-vpn
 #exec --no-startup-id blueberry-tray
 
 # networkmanager-applet
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # clipman-applet
-#exec --no-startup-id xfce4-clipman
+exec --no-startup-id xfce4-clipman
 
 ##################
 # floating rules #
@@ -321,7 +301,7 @@ for_window [class="urxvt"] border pixel 1
 ######################################
 
 # Define colors variables:
-set $backgroundtrans	#333333b8
+set $backgroundtrans	#222222b8
 set $darkblue		#08052b
 set $lightblue		#5294e2
 set $urgentred		#e53935
