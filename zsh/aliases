@@ -12,6 +12,5 @@ alias ip='ip -color=auto'
 
 # Replace some default programs with custom version
 alias gpp='g++'
-alias htop='conky'
 alias vim='nvim'
 
