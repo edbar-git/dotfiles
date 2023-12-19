@@ -17,3 +17,4 @@
     lg = log --all --graph --decorate --oneline --abbrev-commit
     cm = commit
     tags = tag -l
+    aliases = config --get-regexp alias
