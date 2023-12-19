@@ -1,5 +1,5 @@
 # Install packages
-yay -S --needed --noconfirm keepassxc neovim ttf-iosevkaterm-nerd zsh zsh-theme-powerlevel10k-git picom nitrogen gxkb setxkbmap conky autotiling
+yay -S --needed --noconfirm keepassxc neovim ttf-iosevkaterm-nerd zsh zsh-theme-powerlevel10k-git picom nitrogen gxkb setxkbmap conky autotiling ripgrep fzf
 
 # Setup preferences
 
