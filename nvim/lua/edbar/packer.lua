@@ -40,12 +40,17 @@ return require('packer').startup(function(use)
          }
     }
 
+    use 'nvim-tree/nvim-web-devicons'
+
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
-    use 'nvim-tree/nvim-web-devicons'
 
     use { "rebelot/kanagawa.nvim" }
+    use({ "iamcco/markdown-preview.nvim", 
+           run = function() vim.fn["mkdp#util#install"]() end, 
+    })
+
 end)
