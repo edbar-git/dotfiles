@@ -1,5 +1,5 @@
 # Install packages
-yay -S --needed --noconfirm keepassxc neovim ttf-iosevkaterm-nerd zsh zsh-theme-powerlevel10k-git picom nitrogen gxkb setxkbmap conky autotiling ripgrep fzf
+yay -S --needed --noconfirm keepassxc neovim ttf-iosevkaterm-nerd zsh zsh-theme-powerlevel10k-git picom nitrogen gxkb setxkbmap conky autotiling ripgrep fzf alacritty
 
 # Setup preferences
 
@@ -18,6 +18,12 @@ ln -s "$HOME/dotfiles/i3/" "$HOME/.config"
 # Adds picom config
 # rm -rf "$HOME/.config/picom/"
 ln -s "$HOME/dotfiles/picom/" "$HOME/.config"
+
+
+#############
+# alacritty #
+#############
+ln -s "$HOME/dotfiles/alacritty/" "$HOME/.config/alacritty"
 
 #######
 # zsh #
