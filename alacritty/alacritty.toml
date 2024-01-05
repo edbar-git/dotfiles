@@ -1,0 +1,41 @@
+[env]
+# Define variables here
+###
+[window]
+    opacity = 0.85
+###
+[font]
+    normal = { family = "Caskaydia Mono NerdFont", style = "Regular" }
+    size = 14
+###
+# (Github Dark Tritanopia) Colors for Alacritty
+[colors]
+    primary.background = "#0d1117"
+    primary.foreground = "#c9d1d9"
+
+    normal.black = "#484f58"
+    normal.red = "#ff7b72"
+    normal.green = "#484f58"
+    normal.yellow = "#d29922"
+    normal.blue = "#58a6ff"
+    normal.magenta = "#bc8cff"
+    normal.cyan = "#39c5cf"
+    normal.white = "#b1bac4"
+
+    bright.black = "#6e7681"
+    bright.red = "#ffa198"
+    bright.green = "#79c0ff"
+    bright.yellow = "#e3b341"
+    bright.blue = "#79c0ff"
+    bright.magenta = "#bc8cff"
+    bright.cyan = "#39c5cf"
+    bright.white = "#b1b4c4"
+
+    draw_bold_text_with_bright_colors = true
+
+###
+[cursor]
+    style = { shape = "Block", blinking = "Always" }
+###
+[mouse]
+    hide_when_typing = true
